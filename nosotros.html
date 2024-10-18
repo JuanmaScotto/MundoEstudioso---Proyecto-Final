@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="estilo.css">
+    <title>Estudiantil Sanducero</title>
+</head>
+<body>
+    <!-- MENU -->
+    <div class="contenedor-header">
+        <header>
+            <h1><span class="txtAmarillo">Mundo</span><span class="txtRojo">Estudioso</span></h1>
+            <nav id="nav">
+                <a href="index.html" onclick="seleccionar()" data-translate="inicio">Inicio</a>
+                <a href="nosotros.html" onclick="seleccionar()" data-translate="nosotros">Nosotros</a>
+                <a href="servicios.html" onclick="seleccionar()" data-translate="historia">Historia</a>
+                <a href="comodidades.html" onclick="seleccionar()" data-translate="juveniles">Juveniles</a>
+                <a href="galeria.html" onclick="seleccionar()" data-translate="galeria">Galería</a>
+                <div class="dropdown">
+                    <a href="equipo.html" onclick="seleccionar()" data-translate="planteles">Planteles</a>
+                    <div class="dropdown-content">
+                        <a href="equipo.html#primera" data-translate="primera">Primera</a>
+                        <a href="equipo.html#sub18" data-translate="sub18">Sub-18</a>
+                        <a href="equipo.html#sub16" data-translate="sub16">Sub-16</a>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Botón para cambiar de idioma -->
+            <!-- Botón para cambiar de idioma con icono de un mundo -->
+<button id="btnIdioma" onclick="cambiarIdioma()">
+    <i class="fa-solid fa-globe"></i>
+</button>
+
+
+            <div class="redes">
+                <a href="https://www.facebook.com/estudiantilsfc/?locale=es_LA" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://x.com/estudiantilsfc" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/estudiantilsanducerofc/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+            </div>
+
+            <div id="icono-nav" class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars" id="icono-menu"></i>
+            </div>
+            <img src="img/logo-pagina web-Estudiantil.png" width="80px" height="80px">
+            <nav>
+                <div class="dropdown">
+                    <a href="#" class="login-link">
+                        <img class="login-img" src="img/login-removebg-preview.png" width="60" height="60" alt="Login">
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="login.html" data-translate="login">Login</a>
+                        <a href="signup.html" data-translate="signup">Signup</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </div>
+<section id="nosotros" class="nosotros">
+    <div class="fila">
+        <div class="col">
+            <img src="img/nosotros2.png" width="500px" height="500px" alt="">
+        </div>
+        <div class="col">
+            <div class="contenedor-titulo">
+
+                <div class="info">
+                    <h2>NOSOTROS</h2>
+                </div>
+            </div>
+            <br>
+            <p class="p-especial">Valentino Grampin y Juan Manuel Scotto</p>
+            <p>Somos estudiantes de 2° año de bachillerato bilingüe del ITSP. Nacimos en el año 2007, nos gusta hacer deporte y por último, somos hinchas de Estudiantil Sanducero F.C.</p>
+            <br>
+            <a href="https://www.instagram.com/valeeegrampin/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a> Valentino Grampin
+            <br>
+            <a href="https://www.instagram.com/juanmaascotto/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a> Juan Manuel Scotto
+        </div>
+    </div>
+    <hr>
+</section>
+<footer>
+    <div class="info">
+        <p><span class="txtAmarillo">2024</span> - <span class="txtAmarillo">Estudiantil Sanducero
+        <div class="redes">
+<span class="txtAmarillo"> Valentino Grampin - Juan Manuel Scotto</span> 
+            </a>
+        </div>
+    </div>
+</footer>
+<script src="app.js"></script>
+</body>

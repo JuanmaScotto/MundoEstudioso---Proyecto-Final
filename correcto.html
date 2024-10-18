@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Correcto - Estudiantil Sanducero</title>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Sesión Iniciada</h1>
+        </div>
+    </header>
+    <div class="correcto-container">
+        <h2>Bienvenido, <span id="user"></span></h2>
+        <p>Has iniciado sesión correctamente.</p>
+        <button onclick="location.href='index.html'">Siguiente</button>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const username = urlParams.get('username');
+            document.getElementById('user').textContent = username;
+        });
+    </script>
+</body>
+</html>

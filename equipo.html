@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="estilo.css">
+    <title>Estudiantil Sanducero</title>
+</head>
+<body>
+    <!-- MENU -->
+    <div class="contenedor-header">
+        <header>
+            <h1><span class="txtAmarillo">Mundo</span><span class="txtRojo">Estudioso</span></h1>
+            <nav id="nav">
+                <a href="index.html" onclick="seleccionar()" data-translate="inicio">Inicio</a>
+                <a href="nosotros.html" onclick="seleccionar()" data-translate="nosotros">Nosotros</a>
+                <a href="servicios.html" onclick="seleccionar()" data-translate="historia">Historia</a>
+                <a href="comodidades.html" onclick="seleccionar()" data-translate="juveniles">Juveniles</a>
+                <a href="galeria.html" onclick="seleccionar()" data-translate="galeria">Galería</a>
+                <div class="dropdown">
+                    <a href="equipo.html" onclick="seleccionar()" data-translate="planteles">Planteles</a>
+                    <div class="dropdown-content">
+                        <a href="equipo.html#primera" data-translate="primera">Primera</a>
+                        <a href="equipo.html#sub18" data-translate="sub18">Sub-18</a>
+                        <a href="equipo.html#sub16" data-translate="sub16">Sub-16</a>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Botón para cambiar de idioma -->
+            <!-- Botón para cambiar de idioma con icono de un mundo -->
+<button id="btnIdioma" onclick="cambiarIdioma()">
+    <i class="fa-solid fa-globe"></i>
+</button>
+
+
+            <div class="redes">
+                <a href="https://www.facebook.com/estudiantilsfc/?locale=es_LA" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://x.com/estudiantilsfc" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/estudiantilsanducerofc/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+            </div>
+
+            <div id="icono-nav" class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars" id="icono-menu"></i>
+            </div>
+            <img src="img/logo-pagina web-Estudiantil.png" width="80px" height="80px">
+            <nav>
+                <div class="dropdown">
+                    <a href="#" class="login-link">
+                        <img class="login-img" src="img/login-removebg-preview.png" width="60" height="60" alt="Login">
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="login.html" data-translate="login">Login</a>
+                        <a href="signup.html" data-translate="signup">Signup</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </div>
+    <section class="galeria" id="primera">
+        <div class="#primera"></div>
+        <div class="contenido-seccion">
+            <div class="contenedor-titulo">
+                <div class="info">
+                    <br>
+                    <h2>Primera</h2>
+                </div>
+            </div>
+        <div class="players-row">
+            <div class="player-card">
+                <img src="img/Primera/Elvis Prino.png" alt="Sergio Romero" class="player-photo">
+                <div class="player-info">
+                    <p class="position">Defensa</p>
+                    <h2 class="name">Elvis Prino</h2>
+                </div>
+                <div class="player-number">
+                    <span>17</span>
+                </div>
+            </div>
+        
+            <div class="player-card">
+                <img src="img/Primera/Nahuel Pérez.png" alt="Cristian Lema" class="player-photo">
+                <div class="player-info">
+                    <p class="position">Defensa</p>
+                    <h2 class="name">Nahuel Pérez</h2>
+                </div>
+                <div class="player-number">
+                    <span>7</span>
+                </div>
+            </div>
+        
+            <div class="player-card">
+                <img src="img/Primera/Nicolas Noriega.png" alt="Marcelo Saracchi" class="player-photo">
+                <div class="player-info">
+                    <p class="position">Mediocentro</p>
+                    <h2 class="name">Nicolás Noriega</h2>
+                </div>
+                <div class="player-number">
+                    <span>33</span>
+                </div>
+            </div>
+        
+            <div class="player-card">
+                <img src="img/Primera/Santiago Falcón.png" alt="Nicolás Figal" class="player-photo">
+                <div class="player-info">
+                    <p class="position">Atacante</p>
+                    <h2 class="name">Santiago Falcón</h2>
+                </div>
+                <div class="player-number">
+                    <span>24</span>
+                </div>
+    </section>        
+<section class="galeria" id="sub18">
+    <div class="#sub18"></div>
+    <div class="contenido-seccion">
+        <div class="contenedor-titulo">
+            <div class="info">
+                <br>
+                <h2>SUB-18</h2>
+            </div>
+        </div>
+        <div class="players-row">
+            <div class="player-card">
+                <img src="img/Sub 18/Adolfo Ferreira.png" alt="Sergio Romero" class="player-photo">
+                <div class="player-info">
+                    <p class="position">Defensa</p>
+                    <h2 class="name">Adolfo Ferreira</h2>
+                </div>
+                <div class="player-number">
+                    <span>3</span>
+                </div>
+            </div>
+        
+            <div class="player-card">
+                <img src="img/Sub 18/Alejo Episcopo.png" alt="Cristian Lema" class="player-photo">
+                <div class="player-info">
+                    <p class="position">Defensa</p>
+                    <h2 class="name">Alejo Episcopo</h2>
+                </div>
+                <div class="player-number">
+                    <span>6</span>
+                </div>
+            </div>
+        
+            <div class="player-card">
+                <img src="img/Sub 18/Iñaki Silva.png" alt="Marcelo Saracchi" class="player-photo">
+                <div class="player-info">
+                    <p class="position">Atacante</p>
+                    <h2 class="name">Iñaki Silva</h2>
+                </div>
+                <div class="player-number">
+                    <span>13</span>
+                </div>
+            </div>
+        
+            <div class="player-card">
+                <img src="img/Sub 18/Nicolas Escanda.png" alt="Nicolás Figal" class="player-photo">
+                <div class="player-info">
+                    <p class="position">Defensa</p>
+                    <h2 class="name">Nicolás Escanda</h2>
+                </div>
+                <div class="player-number">
+                    <span>15</span>
+                </div>
+            </div>
+        </div>
+        </section>
+<section class="galeria" id="sub16">
+    <div class="#sub16"></div>
+    <div class="contenido-seccion">
+        <div class="contenedor-titulo">
+            <div class="info">
+                <br>
+                <h2>Sub-16</h2>
+            </div>
+        </div>
+        <div class="players-row">
+            <div class="player-card">
+                <img src="img/Sub 16/Lore Monzon.png" alt="Sergio Romero" class="player-photo">
+                <div class="player-info">
+                    <p class="position">Defensa</p>
+                    <h2 class="name">Lorenzo Monzón</h2>
+                </div>
+                <div class="player-number">
+                    <span>16</span>
+                </div>
+            </div>
+        
+            <div class="player-card">
+                <img src="img/Sub 16/Luispe Rodriguez.png" alt="Cristian Lema" class="player-photo">
+                <div class="player-info">
+                    <p class="position">Atacante</p>
+                    <h2 class="name">Luis Pedro Rodríguez</h2>
+                </div>
+                <div class="player-number">
+                    <span>18</span>
+                </div>
+            </div>
+        
+            <div class="player-card">
+                <img src="img/Sub 16/Nicolas Rodriguez.png" alt="Marcelo Saracchi" class="player-photo">
+                <div class="player-info">
+                    <p class="position">Mediocentro</p>
+                    <h2 class="name">Nicolás Rodríguez</h2>
+                </div>
+                <div class="player-number">
+                    <span>5</span>
+                </div>
+            </div>
+        
+            <div class="player-card">
+                <img src="img/Sub 16/Tomas Sziazaro.png" alt="Nicolás Figal" class="player-photo">
+                <div class="player-info">
+                    <p class="position">Defensa</p>
+                    <h2 class="name">Tomás Siazaro</h2>
+                </div>
+                <div class="player-number">
+                    <span>17</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="info">
+        <p><span class="txtAmarillo">2024</span> - <span class="txtAmarillo">Estudiantil Sanducero
+        <div class="redes">
+<span class="txtAmarillo"> Valentino Grampin - Juan Manuel Scotto</span> 
+            </a>
+        </div>
+    </div>
+</footer>
+<script src="app.js"></script>
+</body>

@@ -1,0 +1,1101 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;400;600;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow';
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #dde1e9;
+    overflow-x: hidden;
+}
+/* ***** */
+/* ENCABEZADO - MENU */
+/* ***** */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    text-align: center;
+    background-color: #151623;
+    z-index: 1;
+    min-width: 40px;
+
+}
+
+.dropdown-content a {
+    color: #f9bf09;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #041b40;
+    color: #041b40; /* Cambia el color al hacer hover */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Muestra el dropdown al pasar el mouse */
+}
+
+/* Aumenta el tamaño del icono al pasar el ratón */
+.dropdown:hover .login-img {
+    transform: scale(1.2); /* Agranda el icono al 120% */
+}
+
+
+.contenedor-header{
+    width: 100%;
+    position: fixed;
+    border-bottom: 1px solid #1f283e;
+    background-color: rgba(0,0,0,.7);
+    z-index: 99;
+    padding: 0 20px;
+}
+.contenedor-header header{
+    max-width: 1100px;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    color: #f9bf09;
+}
+
+.contenedor-header header nav a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
+    text-transform: uppercase;
+}
+.contenedor-header header nav a:hover{
+    color: #f9bf09;
+}
+.contenedor-header header .redes a{
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 8px;
+}
+.contenedor-header header .redes a:hover{
+    color: #f9bf09;
+}
+
+/* Línea desplegable al pasar por el menú */
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
+    text-transform: uppercase;
+    position: relative; /* Necesario para el pseudo-elemento */
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #f9bf09; /* Color de la línea amarilla */
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: left;
+}
+
+nav a:hover::after {
+    transform: scaleX(1); /* Hacer visible la línea desplegable */
+}
+
+/* Animación de agrandado para los íconos de redes sociales */
+.redes a {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 8px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.redes a:hover {
+    color: #f9bf09;
+    transform: scale(1.3); /* Agranda los íconos */
+}
+
+
+.nav-responsive{
+    display: none;
+    font-size: 25px;
+ }
+
+ .txtAmarillo{
+    color: #fad301
+    }
+
+.txtRojo{
+    color: #204172;
+}
+ /* Estilo para la imagen de login */
+.login-img {
+    transition: transform 0.3s ease; /* Efecto de transición suave */
+}
+
+/* Cuando el cursor pasa por encima de la imagen */
+.login-img:hover {
+    transform: scale(1.2); /* Aumenta el tamaño al 120% */
+}
+
+ /* ***** */
+/* SECCIÓN INICIO */
+/* ***** */
+.inicio{
+    height: 100vh;
+    background:linear-gradient(rgba(0, 1, 3, 0.5), rgba(0,0,0,.7)),url(img/fondoprueba.jpg);
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    position: relative;
+}
+.inicio .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+
+.inicio .info{
+    width:fit-content;
+    margin: auto;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.inicio .info h2{
+    font-size: 4rem;
+    letter-spacing: 3px;
+}
+.inicio .info p{
+    margin: 20px;
+    color: #797e8e;
+    font-size: 16px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+.inicio .info .btn-mas{
+    width: 50px;
+    margin: auto;
+    height: 50px;
+    border: 2px solid #041b40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #041b40;
+    margin-top: 50px;
+    text-decoration: none;
+}
+.opciones{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.inicio .opciones .opcion{
+    border-top: 2px solid #797e8e;
+    padding: 7px;
+    color: #797e8e;
+    margin: 0 20px;
+}
+.mapa-seccion {
+    display: flex;
+    flex-direction: column; /* Cambiado para que el mapa y el texto se organicen en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+}
+
+.mapa iframe {
+    width: 1350px; /* Asegura que el mapa ocupe todo el ancho disponible */
+    height: 450px; /* Ajuste de la altura si es necesario */
+    border: 0; /* Mantiene el borde */
+}
+
+.texto-mapa {
+    text-align: center; /* Centra el texto */
+    margin-top: 0px; /* Espacio adicional arriba del texto */
+    border: 2px solid #041b40;
+    background-color: #204172;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 1350px;
+    height: 100px;
+}
+.texto-mapa h1 {
+    margin-top: 25px;
+}
+/* ***** */
+/* SECCION NOSOTROS */
+/* ***** */
+.nosotros{
+    max-width: 1100px;
+    margin: auto;
+    height: 100vh;
+    background-color: #dde1e9;
+    padding: 100px 20px;
+}
+.nosotros .fila{
+    display: flex;
+    align-items: center;
+}
+.nosotros .fila .col{
+    width: 50%;
+}
+.nosotros .fila .col img{
+    width: 80%;
+    display: block;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.nosotros .fila .col .contenedor-titulo{
+    display: flex;
+    align-items:center
+}
+.nosotros .fila .col .contenedor-titulo .numero{
+    color: #041b40;
+    font-weight: bold;
+    display: block;
+    font-size: 5rem;
+}
+.nosotros .fila .col .contenedor-titulo .info{
+    margin-left: 30px;
+}
+
+.nosotros .fila .col .contenedor-titulo .info h2{
+    font-size: 3rem;
+}
+.nosotros .fila .col p{
+   margin-bottom: 10px;
+   line-height: 28px;
+}
+.nosotros .fila .col .p-especial{
+    font-weight: bold;
+}
+.nosotros hr{
+    margin-bottom: 30px;
+}
+.nosotros .fila-nosotros{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nosotros .fila-nosotros .frase{
+    font-size: 18px;
+    font-weight: 600;
+}
+.nosotros .fila-nosotros h2{
+    font-size: 2.5rem;
+}
+.nosotros .fila-nosotros button{
+    background-color: #ff1133;
+    border: none;
+    color: #fff;
+    padding: 15px 35px;
+    font-size: 14px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* **** */
+/* HISTORIA */
+/* **** */
+
+.servicios{
+    color: #fff;
+    position: relative;
+}
+.servicios .contenido-seccion{
+    background:linear-gradient( rgba(0, 14, 41, 0.6), rgba(0, 7, 78, 0.7)),url(img/cami_campeonDSC_0680-0631.JPG);
+    background-size: cover;
+    background-position: center center;
+    margin: auto;
+    padding: 0 20px;
+}
+.servicios .contenido-seccion .fila{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+}
+.servicios .contenido-seccion .fila .col{
+    width: 50%;
+}
+.servicios .contenido-seccion .fila .col img{
+    display: flex;
+    width: 50%;
+    margin: auto;
+}
+.servicios .fila .col .contenedor-titulo{
+    display: flex;
+    align-items: center;
+}
+.servicios .fila .col .contenedor-titulo .numero{
+    color: #ff1133;
+    font-weight: bold;
+    display: block;
+    font-size: 5rem;
+}
+.servicios .fila .col .contenedor-titulo .info{
+    margin-left: 30px;
+}
+.servicios .fila .col .contenedor-titulo .info .frase{
+    color: #ff1133;
+}
+.servicios .fila .col .contenedor-titulo .info h2{
+    font-size: 3rem;
+}
+.servicios .fila .col p{
+   margin-bottom: 10px;
+   line-height: 28px;
+}
+.servicios .fila .col .p-especial{
+    font-weight: bold;
+}
+.servicios .info-servicios{
+    max-width: 800px;
+    margin: auto;
+}
+.servicios .info-servicios table{
+    text-align: center;
+    background-color: #fff;
+    color: #1f283e;
+    border-collapse: collapse;
+    position: relative;
+    bottom: 100px;
+}
+.servicios .info-servicios table td{
+    padding: 30px;
+    border: 1px solid #dde1e9
+}
+.servicios .info-servicios table td i{
+    color: #ff1133;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+
+}
+.servicios .info-servicios h3{
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.servicios .info-servicios p{
+    line-height: 30px;
+}
+/* ***** */
+/* JUVENILES */
+/* ***** */
+
+.juveniles{
+    color: #fff;
+    position: relative;
+}
+.juveniles .contenido-seccion{
+    background:linear-gradient( rgba(0, 14, 41, 0.6), rgba(0, 7, 78, 0.7)),url(img/foto_juveniles_fondo.jpeg);
+    background-size: cover;
+    background-position: center center;
+    margin: auto;
+    padding: 0 20px;
+}
+.juveniles .contenido-seccion .fila{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+}
+.juveniles .contenido-seccion .fila .col{
+    width: 50%;
+}
+.juveniles .contenido-seccion .fila .col img{
+    display: block;
+    width: 50%;
+    margin: auto;
+}
+.juveniles .fila .col .contenedor-titulo{
+    display: flex;
+    align-items: center;
+}
+.juveniles .fila .col .contenedor-titulo .info{
+    margin-left: 30px;
+}
+.juveniles .fila .col .contenedor-titulo .info h2{
+    font-size: 3rem;
+}
+.juveniles .fila .col p{
+   margin-bottom: 10px;
+   line-height: 28px;
+}
+.juveniles .fila .col .p-especial{
+    font-weight: bold;
+}
+.juveniles .info-juveniles{
+    max-width: 800px;
+    margin: auto;
+}
+.juveniles .info-juveniles h3{
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.juveniles .info-juveniles p{
+    line-height: 30px;
+}
+/* **** */
+/* GALERIA */
+/* **** */
+/* CSS para agrandar las imágenes de la galería */
+.galeria .fila .col img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease; /* Agrega una transición suave */
+}
+
+.galeria .fila .col img:hover {
+    transform: scale(1.3); /* Agranda la imagen al 120% cuando se pasa el ratón por encima */
+}
+
+.galeria{
+    color: #fff;
+    background:linear-gradient( rgba(0, 14, 41, 0.6), rgba(0, 7, 78, 0.7)),url(img/Estudiantil-banderas.jpeg);
+    background-size: cover;
+    background-position: center center;
+    padding: 100px 0;
+}
+.galeria .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+.galeria .contenedor-titulo{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.galeria  .contenedor-titulo .numero{
+    color: #ff1133;
+    font-weight: bold;
+    display: block;
+    font-size: 5rem;
+}
+.galeria .contenedor-titulo .info{
+    margin-left: 30px;
+}
+.galeria .contenedor-titulo .info .frase{
+    color: #ff1133;
+}
+.galeria .contenedor-titulo .info h2{
+    font-size: 3rem;
+}
+.galeria .fila{
+    display: flex;
+}
+.galeria .fila .col img{
+    width: 100%;
+    display: block;
+}
+.players-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.player-card {
+    width: 270px; /* Ancho de cada tarjeta */
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease; /* Transición para el hover */
+    position: relative; /* AÑADIR ESTA LÍNEA */
+}
+
+.player-card:hover {
+    transform: scale(1.05); /* Agranda ligeramente la tarjeta cuando pasa el cursor */
+}
+
+.player-photo {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Efecto de agrandado suave */
+}
+
+.player-card:hover .player-photo {
+    transform: scale(1.1); /* Agranda la imagen cuando se pasa el cursor por encima */
+}
+
+.player-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.position {
+    font-size: 1rem;
+    color: #8c8c8c;
+    margin: 0;
+}
+
+.name {
+    font-size: 1.2rem;
+    color: #1a1a1a;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.player-number {
+    font-size: 4rem;
+    color: rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    position: absolute;
+    right: 10px;
+}
+
+/* ***** */
+/* JUGADORES */
+/* ***** */
+.equipo{
+    max-width: 1100px;
+    margin: auto;
+    padding-top: 95px;
+    background-color: #dde1e9;
+}
+.textoequipo{   
+    padding: 30px 0;
+    }
+.equipo .contenedor-titulo{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin: auto;
+}
+.equipo  .contenedor-titulo .numero{
+    color: #ff1133;
+    font-weight: bold;
+    display: block;
+    font-size: 5rem;
+}
+.equipo .contenedor-titulo .info{
+    margin-left: 30px;
+}
+.equipo .contenedor-titulo .info .frase{
+    color: #ff1133;
+}
+.equipo .contenedor-titulo .info h2{
+    font-size: 3rem;
+}
+.equipo .fila{
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-around;
+}
+.equipo .fila .col{
+    width: 25%;
+}
+.equipo .fila .col img{
+   max-height: 400px;
+   display: block;
+   margin: auto;
+}
+.equipo .fila .info{
+    border: 5px solid #1f283e;
+    text-align: center;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #f9bf09;
+    color: #041b40;
+}
+.equipo .fila .info p{
+    margin: 20px 0;
+}
+.equipo .fila .info a{
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 20px;
+    font-size: 20px;
+}
+.full-width-bg {
+    width: 100vw; /* Ocupar todo el ancho de la pantalla */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background-color: #041b40; /* Color de fondo para "PRIMERA" */
+    color: #fad301; /* Cambiar color de texto para mejor contraste */
+}
+
+/* ***** */
+/* FOOTER */
+/* ***** */
+footer{
+    background-color: #151623;
+    padding: 30px 0;
+}
+footer .info{
+    display: flex;
+    max-width: 1100px;
+    margin: auto;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+footer .info p{
+    color: #797e8e;
+}
+footer .info a{
+    text-decoration: none;
+    color: #797e8e;
+    display: inline-block;
+    margin: 0 15px;
+}
+/* ***** */
+/* RESPONSIVE */
+/* ***** */
+header {
+    display: flex;
+    align-items: center; /* Centra verticalmente el logo y el menú */
+    justify-content: space-between; /* Logo a la izquierda, menú a la derecha */
+    padding: 0 20px;
+}
+
+header h1 {
+    margin: 0; /* Elimina márgenes del logo para mejor alineación */
+}
+
+header nav {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los items del menú */
+    justify-content: flex-end; /* Alinea el menú a la derecha */
+}
+
+nav .dropdown {
+    position: relative; /* Permite posicionar el dropdown relativo a este contenedor */
+    display: flex;
+    justify-content: center; /* Centra el dropdown */
+}
+
+nav .dropdown-content {
+    display: none; /* Oculta el contenido del dropdown por defecto */
+    position: absolute;
+    top: 100%; /* Despliega el dropdown hacia abajo, debajo del botón */
+    left: 0;
+    background-color: #151623; /* Fondo oscuro como en la página 1 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ajustamos la sombra para que sea más suave */
+    z-index: 10;
+    width: 100%; /* El dropdown ocupará todo el ancho del botón */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+nav .dropdown:hover .dropdown-content {
+    display: block; /* Muestra el dropdown al hacer hover */
+}
+
+nav .dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: #fff; /* Color del texto en blanco */
+    text-decoration: none;
+    text-align: center; /* Alinea los enlaces al centro */
+    width: 100%; /* Ajusta el ancho al 100% para que el texto se centre */
+}
+
+nav .dropdown-content a:hover {
+    background-color: #333; /* Cambiamos el hover a un color oscuro más claro */
+}
+
+/* Estilos responsive para pantallas menores a 900px */
+@media only screen and (max-width: 900px) {
+
+    /* Ocultar la imagen del logo en responsive */
+    header img {
+        display: none; /* Ocultar la imagen en dispositivos móviles */
+    }
+    
+    #btnIdioma {
+        display: none;
+    }
+
+    /* Mantener el texto "MundoEstudioso" visible */
+    header h1 {
+        display: block; /* Aseguramos que el texto sigue visible */
+    }
+
+    /* Ocultar el menú normal y las redes sociales en responsive */
+    header nav {
+        display: none;
+    }
+
+    header .redes {
+        display: none;
+    }
+
+    /* Icono del menú responsive (barras/cruz) */
+    #icono-nav {
+        display: block; /* Mostrar el icono del menú */
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 100; /* Por encima del menú */
+    }
+
+    /* Mostrar el menú responsive cuando está activo */
+    nav.responsive {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #151623;
+        z-index: 99;
+    }
+
+    nav.responsive a {
+        display: block;
+        width: fit-content;
+        margin: 10px auto;
+        font-size: 30px;
+    }
+    
+    /* Nuevos estilos para dropdown en móviles */
+    nav .dropdown a {
+        display: block;
+        text-align: center; 
+        padding: 10px 0; 
+        width: 100%; /* Ajusta el ancho en móviles */
+    }
+
+    nav .dropdown {
+        display: flex;
+        justify-content: center; /* Centra el dropdown en móviles */
+    }
+
+    .nav-responsive {
+        display: block;
+    }
+
+    nav.responsive {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #151623; /* Fondo oscuro como en la página 1 */
+        z-index: 99;
+    }
+
+    nav.responsive a {
+        display: block;
+        width: fit-content;
+        margin: 10px auto;
+        font-size: 30px;
+    }
+}
+
+/* Estilos específicos para pantallas menores a 600px */
+@media only screen and (max-width: 600px) {
+
+    /* Galería */
+    .galeria .fila {
+        display: block;
+    }
+    .galeria .fila .col {
+        width: 100%; 
+        margin-bottom: 20px;
+    }
+    .galeria .fila .col img {
+        width: 100%;
+        display: block;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+    }
+    .galeria .fila .col img:hover {
+        transform: scale(1.2);
+    }
+    .galeria .fila .col img:active {
+        transform: scale(1.5);
+    }
+
+    /* Mapa */
+    .mapa iframe {
+        width: 384px;
+    }
+
+    .texto-mapa {
+        width: 384px;
+    }
+
+    /* Sección de equipo */
+    .equipo .fila {
+        display: block;
+    }
+
+    .equipo .fila .col {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .equipo .fila .col img {
+        max-height: 200px;
+    }
+
+    .equipo .fila .info {
+        max-width: 250px;
+        margin: auto;
+    }
+
+    /* Iconos del footer */
+    footer .info {
+        display: block;
+        text-align: center;
+    }
+
+    footer .info p {
+        margin-bottom: 10px;
+    }
+}
+
+/* Estilos generales para el hover en imágenes */
+.galeria .fila .col img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.galeria .fila .col img:hover {
+    transform: scale(1.2);
+}
+
+.galeria .fila .col img:active {
+    transform: scale(1.5);
+}
+
+    .inicio .opciones{
+        display: none;
+    }
+    .nosotros .fila .col{
+        width: 100%;
+        margin: auto;
+    }
+    .nosotros .fila .col img{
+        margin: auto;
+        width: 400px;
+    }
+    .servicios .contenido-seccion .fila{
+        display: flex;
+    }
+    .servicios .contenido-seccion .fila .col{
+       width: 100%;
+    }
+    .comodidades .fila{
+        display: block;
+    }
+    .comodidades .fila .col{
+        width: 100%;
+    }
+    .comodidades .fila .col img{
+        max-width: 200px;
+    }
+    .equipo .fila{
+        display: block;
+    }
+    .equipo .fila .col{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .equipo .fila .col img{
+        max-height: 200px;
+    }
+    .equipo .fila .info{
+        max-width: 250px;
+        margin: auto;
+    }
+    .contacto .fila{
+        display: block;
+    }
+    .contacto .fila .col{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .contacto .fila-datos{
+        display: block;
+    }
+    .contacto .fila-datos .col{
+        margin-bottom: 20px;
+    }
+    .icono-nav .fila{
+        display: block;
+    }
+    .icono-nav .fila .col{
+        width: 100%;
+    }
+    .icono-nav .fila .col img{
+        max-width: 200px;
+    }
+    footer .info{
+        display: block;
+        text-align: center;
+    }
+    footer .info p{
+        margin-bottom: 10px;
+    }
+/* Estilos para el login */
+/* Efecto de desenfoque para el fondo */
+.blur-background {
+    filter: blur(8px);
+    transition: filter 0.3s ease;
+}
+
+/* Estilo para resaltar el formulario de login */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(189, 189, 189, 0.8); /* Fondo gris claro */
+    padding: 40px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    z-index: 100;
+}
+
+/* Cambiar color del título y etiquetas a azul */
+.login-container h1,
+.login-container label {
+    color: #041b40; /* Azul utilizado en el botón */
+    font-weight: bold;
+}
+
+/* Estilo para los inputs y botones */
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.login-container label, .login-container input, .login-container button {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.login-container button {
+    background-color: #041b40;
+    color: #f9bf09;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-container button:hover {
+    background-color: #f9bf09;
+    color: #041b40;
+}
+    
+    /* Estilos para la página de confirmación */
+    .correcto-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    text-align: center;
+    }
+    
+    .correcto-container h2 {
+    color: #041b40;
+    margin-bottom: 20px;
+    }
+    
+    .correcto-container p {
+    margin-bottom: 20px;
+    }
+    
+    .correcto-container button {
+    background-color: #041b40;
+    color: #f9bf09;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    }
+    
+    .correcto-container button:hover {
+    background-color: #f9bf09;
+    color: #041b40;
+    }
+    
+    /* Estilos para la página de confirmación */
+    .correcto-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    text-align: center;
+    }
+    
+    .correcto-container h2 {
+    color: #041b40;
+    margin-bottom: 20px;
+    }
+    
+    .correcto-container p {
+    margin-bottom: 20px;
+    }
+    
+    .correcto-container button {
+    background-color: #041b40;
+    color: #f9bf09;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    }
+    
+    .correcto-container button:hover {
+    background-color: #f9bf09;
+    color: #041b40;
+    }
+    /* Agrandar imágenes al pasar el cursor */
+    .logo img, .header-content a img {
+      transition: transform 0.3s ease; /* Suaviza la transición del tamaño */
+    }
+    
+    .logo img:hover, .header-content a img:hover {
+      transform: scale(1.1); /* Aumenta el tamaño al 110% */
+    }
